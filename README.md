@@ -34,6 +34,19 @@ px-to-rem
 
 参数配置文件：Sublime Text -> Preferences -> Package Settings -> rem-unit-fix
 
+```json
+{
+    "fontsize": 16,
+    "precision": 8,
+    "leadingzero": false,
+    "exts": [".css", ".scss", ".less", ".sass", ".styl"],
+    "firstline": "",
+    "reservedunit": false
+}
+```
+
+
+
 * `fontsize` - html元素font-size值，默认为16。
 * `precision` - px转rem的小数部分的最大长度，默认为8。
 * `leadingzero` - 是否保留前导0，默认不保留。
