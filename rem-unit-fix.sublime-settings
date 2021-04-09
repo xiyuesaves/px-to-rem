@@ -1,0 +1,8 @@
+{
+    "fontsize": 16,
+    "precision": 8,
+    "leadingzero": false,
+    "exts": [".css", ".scss", ".less", ".sass", ".styl"],
+    "firstline": "",
+    "reservedunit": false
+}
