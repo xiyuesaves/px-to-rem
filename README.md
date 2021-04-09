@@ -1,4 +1,4 @@
-rem-unit-fix
+px-to-rem
 -------------
 一个输入px可转为rem的Sublime Text 3自动完成插件。
 
