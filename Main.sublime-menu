@@ -9,20 +9,20 @@
                 "children":
                 [
                     {
-                        "caption": "rem-unit",
+                        "caption": "px-to-rem",
                         "children":
                         [
                             {
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/rem-unit/rem-unit.sublime-settings"
+                                    "file": "${packages}/px-to-rem/px-to-rem.sublime-settings"
                                 },
                                 "caption": "Settings – Default"
                             },
                             {
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/User/rem-unit.sublime-settings"
+                                    "file": "${packages}/User/px-to-rem.sublime-settings"
                                 },
                                 "caption": "Settings – User"
                             },

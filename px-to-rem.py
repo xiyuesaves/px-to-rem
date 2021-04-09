@@ -18,11 +18,11 @@ def init_settings():
     # 从配置文件获取设置
     get_settings()
     # 应该是动态监听配置文件变动的
-    sublime.load_settings('rem-unit.sublime-settings').add_on_change('get_settings', get_settings)
+    sublime.load_settings('px-to-rem.sublime-settings').add_on_change('get_settings', get_settings)
 
     # 从配置文件加载设置
 def get_settings():
-    settings = sublime.load_settings('rem-unit.sublime-settings')
+    settings = sublime.load_settings('px-to-rem.sublime-settings')
     SETTINGS['fontsize'] = settings.get('fontsize', 16)
     SETTINGS['precision'] = settings.get('precision', 8)
     SETTINGS['exts'] = settings.get('exts', [".css", ".scss", ".less", ".sass", ".styl"])
@@ -42,7 +42,7 @@ class CssRemCommand(sublime_plugin.EventListener):
         return None
 
     def on_query_completions(self, view, prefix, locations):
-        # print('rem-unit start {0}, {1}'.format(prefix, locations))
+        # print('px-to-rem start {0}, {1}'.format(prefix, locations))
 
         # 判断是否符合文件类型不符合直接return出去
         fileName, fileExtension = os.path.splitext(view.file_name())
@@ -116,7 +116,6 @@ class CssRemCommand(sublime_plugin.EventListener):
                 snippets += [(value + 'px -> ' + strRem + '(keep px value)', strRem + commentStr)]
             else:
                 snippets += [(value + 'px -> ' + strRem + '(' + str(get_setting(view, 'fontsize')) + 'px/rem)', strRem)]
-        # print("rem-unit: {0}".format(snippets))
         return snippets
 
 class ReplaceRemCommand(sublime_plugin.TextCommand):
